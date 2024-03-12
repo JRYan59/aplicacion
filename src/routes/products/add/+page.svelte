@@ -7,13 +7,15 @@ let formData = {Codigo:"", Descripcion: "", Precio: "" };
     try {
       console.log(formData);
       console.log(JSON.stringify({formData}))
-      const response = await fetch('http://localhost:3000/products', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-          'Content-Type': 'application/json'
-        },
-      });
+
+      //Aqui se que  me revienta porque nisiquiera muestra el error ni ok.
+      // const response = await fetch('http://localhost:3000/products', {
+      //   method: 'POST',
+      //   body: JSON.stringify(formData),
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      // });
       if (response.ok) {
         console.log('Producto agregado exitosamente');
         history.back();
