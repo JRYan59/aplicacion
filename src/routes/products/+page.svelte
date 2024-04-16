@@ -36,18 +36,19 @@
 			<tbody class="divide-y divide-gray-200">
 				{#each products as product}
 					<tr>
-						<td class="px-6 py-4 whitespace-nowrap">{product.Codigo}</td>
-						<td class="px-6 py-4 whitespace-nowrap">{product.Descripcion}</td>
-						<td class="px-6 py-4 whitespace-nowrap text-end">{product.Precio}</td>
+						<td class="px-6 py-4 whitespace-nowrap">{product.id}</td>
+						<td class="px-6 py-4 whitespace-nowrap">{product.description}</td>
+						<td class="px-6 py-4 whitespace-nowrap text-end">{product.price}</td>
 						<td class="px-6 py-4 whitespace-nowrap">
 							<a
-								href="http://localhost:5173/products/edit/{product.Codigo}"
+								href="http://localhost:5173/products/{product.id}"
 								class="text-indigo-600 hover:text-indigo-900"
 								>Edit</a
 							>
-							<button type="submit"
+							<a
+								href="http://localhost:5173/products/del/{product.id}"
 								class="text-red-600 hover:text-red-900 ml-2"
-								>Delete</button
+								>Delete</a
 							>
 						</td>
 					</tr>
